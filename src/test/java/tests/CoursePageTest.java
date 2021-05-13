@@ -16,12 +16,12 @@ public class CoursePageTest extends BaseTest {
     CoursePage coursePage;
 
     @Test
-    @Story("Проверка курса по Алгоритмы и структуры данных")
-    @Description("Тест проверяет заголовок и кнопку записи на странице курса по Алгоритмы и структуры данных")
-    @DisplayName("Проверка курса по Алгоритмы и структуры данных")
+    @Story("Проверка курса Разработчик IoT")
+    @Description("Тест проверяет заголовок и кнопку записи на странице курса Разработчик IoT")
+    @DisplayName("Проверка курса Разработчик IoT")
     public void checkJsCoursePageTest() {
-        String expectedCourseName = "Алгоритмы и структуры данных";
-        String expectedButtonName = "Вступительное тестирование";
+        String expectedCourseName = "Разработчик IoT";
+        String expectedButtonName = "Успеть на курс";
 
         mainPage = new MainPage(driver);
         coursePage = new CoursePage(driver);
@@ -30,7 +30,7 @@ public class CoursePageTest extends BaseTest {
                 .open()
                 .clickMainMenuByName("Курсы")
                 .openSecondLevelMenuByName("Программирование")
-                .clickSecondLevelMenuByName("Алгоритмы и структуры данных");
+                .clickSecondLevelMenuByName("Разработчик IoT");
 
         Assertions.assertEquals(expectedCourseName, coursePage.getTitleText(),
                 String.format("Заголовок страницы должен быть равен %s", expectedCourseName));
@@ -64,11 +64,11 @@ public class CoursePageTest extends BaseTest {
     }
 
     @Test
-    @Story("Проверка курса по тестированию Нагрузочное тестирование")
-    @Description("Тест проверяет заголовок и кнопку записи на странице курса по тестированию Нагрузочное тестирование")
-    @DisplayName("Проверка курса по тестированию Нагрузочное тестирование")
+    @Story("Проверка курса по тестированию Game QA Engineer")
+    @Description("Тест проверяет заголовок и кнопку записи на странице курса по тестированию Game QA Engineer")
+    @DisplayName("Проверка курса по тестированию Game QA Engineer")
     public void checkJavaQaCoursePageTest() {
-        String expectedCourseName = "Нагрузочное тестирование";
+        String expectedCourseName = "Game QA Engineer";
         String expectedButtonName = "Вступительное тестирование";
 
         mainPage = new MainPage(driver);
@@ -78,7 +78,7 @@ public class CoursePageTest extends BaseTest {
                 .open()
                 .clickMainMenuByName("Курсы")
                 .openSecondLevelMenuByName("Тестирование")
-                .clickSecondLevelMenuByName("Нагрузочное тестирование");
+                .clickSecondLevelMenuByName("Game QA Engineer");
 
         Assertions.assertEquals(expectedCourseName, coursePage.getTitleText(),
                 String.format("Заголовок страницы должен быть равен %s", expectedCourseName));
