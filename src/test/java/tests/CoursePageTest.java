@@ -19,7 +19,7 @@ public class CoursePageTest extends BaseTest {
     @Story("Проверка курса Разработчик IoT")
     @Description("Тест проверяет заголовок и кнопку записи на странице подготовки к сертификации Oracle Java Programmer (OCAJP")
     @DisplayName("Проверка курса Разработчик IoT")
-    public void checkJsCoursePageTest() {
+    public void checkFirstCoursePageTest() {
         String expectedCourseName = "Подготовка к сертификации Oracle Java Programmer (OCAJP)";
         String expectedButtonName = "Успеть на курс";
 
@@ -43,7 +43,7 @@ public class CoursePageTest extends BaseTest {
     @Story("Проверка курса по Machine Learning")
     @Description("Тест проверяет заголовок и кнопку записи на странице экспресс курса")
     @DisplayName("Проверка курса по NoSQL")
-    public void checkDatabaseCoursePageTest() {
+    public void checkSecondCoursePageTest() {
         String expectedCourseName = "Экспресс-курс \"Версионирование и командная работа с помощью Git\"";
         String expectedButtonName = "Оставить заявку";
 
@@ -66,7 +66,7 @@ public class CoursePageTest extends BaseTest {
     @Story("Проверка курса по тестированию Game QA Engineer")
     @Description("Тест проверяет заголовок и кнопку записи на странице курса по тестированию Game QA Engineer")
     @DisplayName("Проверка курса по тестированию Game QA Engineer")
-    public void checkJavaQaCoursePageTest() {
+    public void checkThirdCoursePageTest() {
         String expectedCourseName = "Game QA Engineer";
         String expectedButtonName = "Вступительное тестирование";
 
