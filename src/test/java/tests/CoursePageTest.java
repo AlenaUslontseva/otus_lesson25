@@ -17,10 +17,10 @@ public class CoursePageTest extends BaseTest {
 
     @Test
     @Story("Проверка курса Разработчик IoT")
-    @Description("Тест проверяет заголовок и кнопку записи на странице курса Разработчик IoT")
+    @Description("Тест проверяет заголовок и кнопку записи на странице подготовки к сертификации Oracle Java Programmer (OCAJP")
     @DisplayName("Проверка курса Разработчик IoT")
     public void checkJsCoursePageTest() {
-        String expectedCourseName = "Разработчик IoT";
+        String expectedCourseName = "Подготовка к сертификации Oracle Java Programmer (OCAJP)";
         String expectedButtonName = "Успеть на курс";
 
         mainPage = new MainPage(driver);
@@ -30,13 +30,14 @@ public class CoursePageTest extends BaseTest {
                 .open()
                 .clickMainMenuByName("Курсы")
                 .openSecondLevelMenuByName("Программирование")
-                .clickSecondLevelMenuByName("Разработчик IoT");
+                .clickSecondLevelMenuByName("Подготовка к сертификации Oracle Java Programmer (OCAJP)");
 
         Assertions.assertEquals(expectedCourseName, coursePage.getTitleText(),
                 String.format("Заголовок страницы должен быть равен %s", expectedCourseName));
 
         Assertions.assertEquals(expectedButtonName, coursePage.getButtonText(),
                 String.format("На странице курса должна быть кнопка %s", expectedButtonName));
+
     }
 
     @Test
