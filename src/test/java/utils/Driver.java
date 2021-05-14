@@ -14,9 +14,10 @@ public class Driver {
         if (driver == null || hasDriverQuit()) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
-            driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
-            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            driver.manage().timeouts().pageLoadTimeout(7, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
             driver.manage().window().maximize();
+            driver.manage().deleteAllCookies();
         }
 
         return driver;
@@ -24,6 +25,7 @@ public class Driver {
 
     public static void closeDriver() {
         if (driver != null) {
+            driver.manage().deleteAllCookies();
             driver.quit();
         }
     }

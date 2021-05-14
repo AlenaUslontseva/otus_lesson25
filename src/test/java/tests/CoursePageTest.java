@@ -37,16 +37,15 @@ public class CoursePageTest extends BaseTest {
 
         Assertions.assertEquals(expectedButtonName, coursePage.getButtonText(),
                 String.format("На странице курса должна быть кнопка %s", expectedButtonName));
-
     }
 
     @Test
     @Story("Проверка курса по Machine Learning")
-    @Description("Тест проверяет заголовок и кнопку записи на странице курса Machine Learning. Professional")
-    @DisplayName("Проверка курса по Machine Learning. Professional")
+    @Description("Тест проверяет заголовок и кнопку записи на странице экспресс курса")
+    @DisplayName("Проверка курса по NoSQL")
     public void checkDatabaseCoursePageTest() {
-        String expectedCourseName = "Machine Learning. Professional";
-        String expectedButtonName = "Вступительное тестирование";
+        String expectedCourseName = "Экспресс-курс \"Версионирование и командная работа с помощью Git\"";
+        String expectedButtonName = "Оставить заявку";
 
         mainPage = new MainPage(driver);
         coursePage = new CoursePage(driver);
@@ -54,9 +53,8 @@ public class CoursePageTest extends BaseTest {
         mainPage
                 .open()
                 .clickMainMenuByName("Курсы")
-                .openSecondLevelMenuByName("Data Science")
-                .clickSecondLevelMenuByName("Machine Learning. Professional");
-
+                .openSecondLevelMenuByName("Инфраструктура")
+                .clickSecondLevelMenuByName("Экспресс-курс \"Версионирование и командная работа с помощью Git\"");
         Assertions.assertEquals(expectedCourseName, coursePage.getTitleText(),
                 String.format("Заголовок страницы должен быть равен %s", expectedCourseName));
 
