@@ -16,12 +16,12 @@ public class CoursePageTest extends BaseTest {
     CoursePage coursePage;
 
     @Test
-    @Story("Проверка курса Разработчик IoT")
-    @Description("Тест проверяет заголовок и кнопку записи на странице подготовки к сертификации Oracle Java Programmer (OCAJP")
-    @DisplayName("Проверка курса Разработчик IoT")
+    @Story("Проверка курса Python Developer. Professional")
+    @Description("Тест проверяет заголовок и кнопку записи на странице курса Python Developer. Professional")
+    @DisplayName("Проверка курса Python Developer. Professional")
     public void checkFirstCoursePageTest() {
-        String expectedCourseName = "Подготовка к сертификации Oracle Java Programmer (OCAJP)";
-        String expectedButtonName = "Успеть на курс";
+        String expectedCourseName = "Python Developer. Professional";
+        String expectedButtonName = "Вступительное тестирование";
 
         mainPage = new MainPage(driver);
         coursePage = new CoursePage(driver);
@@ -30,7 +30,7 @@ public class CoursePageTest extends BaseTest {
                 .open()
                 .clickMainMenuByName("Курсы")
                 .openSecondLevelMenuByName("Программирование")
-                .clickSecondLevelMenuByName("Подготовка к сертификации Oracle Java Programmer (OCAJP)");
+                .clickSecondLevelMenuByName("Python Developer. Professional");
 
         Assertions.assertEquals(expectedCourseName, coursePage.getTitleText(),
                 String.format("Заголовок страницы должен быть равен %s", expectedCourseName));
